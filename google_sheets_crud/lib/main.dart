@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'controller/form_controller.dart';
 import 'model/form.dart';
+import 'feedback_list.dart';
+
 
 void main() => runApp(MyApp());
 
@@ -158,6 +160,18 @@ class _MyHomePageState extends State<MyHomePage> {
                 onPressed:_submitForm,
                 child: Text('Submit Feedback'),
               ),
+              RaisedButton(
+              color: Colors.lightBlueAccent,
+              textColor: Colors.black,
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => FeedbackListScreen(),
+                    ));
+              },
+              child: Text('View Feedback'),
+            ),
             ],
           ),
         ),
